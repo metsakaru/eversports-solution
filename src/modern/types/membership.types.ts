@@ -1,0 +1,24 @@
+export interface Membership {
+    id: number
+    name: string
+    user: number
+    recurringPrice: number
+    validFrom: Date
+    validUntil: Date
+    state: string
+    paymentMethod: string
+    billingInterval: string
+    billingPeriods: number
+}
+
+export interface MembershipPeriod {
+    membership: number
+    start: Date
+    end: Date
+    state: string
+}
+
+export interface MembershipWithPeriods {
+    membership: Membership;
+    periods: MembershipPeriod[];
+  }

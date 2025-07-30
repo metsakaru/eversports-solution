@@ -1,12 +1,9 @@
 import express, { Request, Response } from "express"
-import memberships from "../../data/memberships.json"
-import membershipPeriods from "../../data/membership-periods.json"
+import { getMembershipsWithPeriods } from "../controllers/membership.controller";
 
 const router = express.Router();
 
-router.get("/", (req: Request, res: Response) => {
-  throw new Error('not implemented')
-})
+router.get("/", getMembershipsWithPeriods);
 
 router.post("/", (req: Request, res: Response) => {
   throw new Error('not implemented')
