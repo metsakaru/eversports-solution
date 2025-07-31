@@ -12,7 +12,9 @@ export interface Membership {
 }
 
 export interface MembershipPeriod {
+    id: number
     membership: number
+    uuid: string
     start: Date
     end: Date
     state: string
@@ -20,5 +22,5 @@ export interface MembershipPeriod {
 
 export interface MembershipWithPeriods {
     membership: Membership;
-    periods: MembershipPeriod[];
-  }
+    membershipPeriods: MembershipPeriod[];
+}

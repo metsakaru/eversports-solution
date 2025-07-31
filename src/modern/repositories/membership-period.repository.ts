@@ -13,3 +13,18 @@ export async function getAll(): Promise<MembershipPeriod[]> {
   }));
   return periods;
 }
+
+export async function save(newPeriod: MembershipPeriod): Promise<void> {
+  const data = await fs.readFile(DATA_FILE, "utf-8");
+  const periods: MembershipPeriod[] = JSON.parse(data);
+
+  const formattedEntry = {
+    ...newPeriod,
+    start: new Date(newPeriod.start.toISOString().slice(0, 10)),
+    end: new Date(newPeriod.end.toISOString().slice(0, 10)),
+  };
+
+  periods.push(formattedEntry);
+
+  await fs.writeFile(DATA_FILE, JSON.stringify(periods, null, 2), "utf-8");
+}
