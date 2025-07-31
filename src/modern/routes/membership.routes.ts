@@ -1,12 +1,10 @@
 import express, { Request, Response } from "express"
-import { getMembershipsWithPeriods } from "../controllers/membership.controller";
+import { getMembershipsWithPeriods, createMembership } from "../controllers/membership.controller";
 
 const router = express.Router();
 
 router.get("/", getMembershipsWithPeriods);
 
-router.post("/", (req: Request, res: Response) => {
-  throw new Error('not implemented')
-})
+router.post("/", createMembership);
 
 export default router;
