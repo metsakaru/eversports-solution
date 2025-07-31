@@ -60,3 +60,10 @@ Assumptions made:
 
 Repository holds mocked data functions that allow to read data from JSON instead of DB source, but logically it would work the same with DB.
 The only issue I have had with my mocked .save() and .getAll() functions is that JSON number preserves a shortest number it can find during serialization, therefore prices formatted from 100.0 to 100. It wouldn't be an issue if recurringPrice was a string instead of number. I have decided to leave it this way, because my main purpose with repository was to show-case read-write part and it does not affect on the modernisation of the code in general.
+
+### Showcase of PR and commits
+
+I thought it would be also a good idea to show-case a minimalistic example how would potential PR and commit messages look like working on similar task in real-life.
+
+https://github.com/metsakaru/eversports-solution/pull/1
+https://github.com/metsakaru/eversports-solution/pull/1/commits
