@@ -67,3 +67,11 @@ I thought it would be also a good idea to show-case a minimalistic example how w
 
 https://github.com/metsakaru/eversports-solution/pull/1
 https://github.com/metsakaru/eversports-solution/pull/1/commits
+
+### Testing
+
+For automated testing I've picked Jest library based on ts-jest preprocessor. I've added couple of automated tests around utils functions as the beginning to ensure business logic is being covered with basic simple tests first.
+
+```sh
+npm test
+```
