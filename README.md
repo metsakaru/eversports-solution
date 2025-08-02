@@ -77,3 +77,5 @@ For correctness of API response I've added supertest library on top of Jest that
 ```sh
 npm test
 ```
+
+What I would do if I have allocated more time for testing? Definetely a bunch of things. I'm not happy with testing that is done here it does not provide much of the value, but it does provide a way how we can potentially get some value from automated testing. I would definetely add more tests around utils functions and it's negative as long as edge cases should be covered. Additionally I would definetely add some contract tests done via [Pact.io](https://docs.pact.io/) to ensure correctness of API response and it's types. Being cautios of time allocated for this I've purposefully just showed how tests would look alike. 
