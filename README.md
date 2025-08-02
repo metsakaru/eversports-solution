@@ -72,6 +72,8 @@ https://github.com/metsakaru/eversports-solution/pull/1/commits
 
 For automated testing I've picked Jest library based on ts-jest preprocessor. I've added couple of automated tests around utils functions as the beginning to ensure business logic is being covered with basic simple tests first.
 
+For correctness of API response I've added supertest library on top of Jest that would be able to execute API and validate the data. As we use static source of data I haven't add any mocks to create data before we validate it and just validate statically first available object in JSON file that it is returned as it is saved in JSON.
+
 ```sh
 npm test
 ```

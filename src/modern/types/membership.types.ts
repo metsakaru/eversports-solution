@@ -24,3 +24,14 @@ export interface MembershipWithPeriods {
     membership: Membership;
     membershipPeriods: MembershipPeriod[];
 }
+
+export interface SerializedMembership extends Omit<Membership, 'recurringPrice' | 'validFrom' | 'validUntil'> {
+    recurringPrice: string;
+    validFrom: string;
+    validUntil: string;
+}
+
+export interface SerializedMembershipPeriod extends Omit<MembershipPeriod, 'start' | 'end' > {
+    start: string;
+    end: string;
+}

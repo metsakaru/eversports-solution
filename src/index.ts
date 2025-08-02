@@ -5,7 +5,7 @@ import { errorHandler } from './error-handler.middleware'
 // because of the javascript module, we need to use require to import the legacy routes
 const legacyMembershipRoutes = require('./legacy/routes/membership.routes')
 
-const app = express()
+export const app = express()
 const port = 3099
 
 app.use(express.json())
