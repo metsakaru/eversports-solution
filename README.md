@@ -67,3 +67,15 @@ I thought it would be also a good idea to show-case a minimalistic example how w
 
 https://github.com/metsakaru/eversports-solution/pull/1
 https://github.com/metsakaru/eversports-solution/pull/1/commits
+
+### Testing
+
+For automated testing I've picked Jest library based on ts-jest preprocessor. I've added couple of automated tests around utils functions as the beginning to ensure business logic is being covered with basic simple tests first.
+
+For correctness of API response I've added supertest library on top of Jest that would be able to execute API and validate the data. As we use static source of data I haven't add any mocks to create data before we validate it and just validate statically first available object in JSON file that it is returned as it is saved in JSON.
+
+```sh
+npm test
+```
+
+What I would do if I have allocated more time for testing? Definetely a bunch of things. I'm not happy with testing that is done here it does not provide much of the value, but it does provide a way how we can potentially get some value from automated testing. I would definetely add more tests around utils functions and it's negative as long as edge cases should be covered. Additionally I would definetely add some contract tests done via [Pact.io](https://docs.pact.io/) to ensure correctness of API response and it's types. Being cautios of time allocated for this I've purposefully just showed how tests would look alike. 
